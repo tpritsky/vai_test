@@ -40,12 +40,5 @@ st.title("Vertex AI chatbot demo")
 
 # Create Streamlit columns
 col1, col2 = st.columns([1, 1])
-# with col1:
-#     uploaded_files = st.file_uploader("Choose a PDF file", accept_multiple_files=True)
 with col2:
     st.components.v1.html(dialogflow_code, height=650)
-
-for uploaded_file in uploaded_files:
-    bytes_data = uploaded_file.read()
-    st.write("filename:", uploaded_file.name)
-    st.write(bytes_data)
