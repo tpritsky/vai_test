@@ -29,7 +29,7 @@ dialogflow_code = """
             agent-id="94d1a3fb-2068-439e-8a1c-293afb924030"
             language-code="en"
             max-query-length="-1">
-            <df-messenger-chat-bubble chat-title="cqa2-test"></df-messenger-chat-bubble>
+            <df-messenger-chat-bubble chat-title="Vertex AI chatbot"></df-messenger-chat-bubble>
         </df-messenger>
     </div>
 """
@@ -40,8 +40,8 @@ st.title("Vertex AI chatbot demo")
 
 # Create Streamlit columns
 col1, col2 = st.columns([1, 1])
-with col1:
-    uploaded_files = st.file_uploader("Choose a PDF file", accept_multiple_files=True)
+# with col1:
+#     uploaded_files = st.file_uploader("Choose a PDF file", accept_multiple_files=True)
 with col2:
     st.components.v1.html(dialogflow_code, height=650)
 
